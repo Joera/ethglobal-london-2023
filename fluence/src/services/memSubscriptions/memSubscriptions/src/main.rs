@@ -7,6 +7,9 @@ module_manifest!();
 pub fn main() {}
 
 #[marine]
-pub fn greeting(name: String) -> String {
-    format!("Hi, {}", name)
+pub fn fetch(name: String) -> Vec<String> {
+
+    // get from subscription contract when enough time 
+
+    vec!() // list of cids
 }
