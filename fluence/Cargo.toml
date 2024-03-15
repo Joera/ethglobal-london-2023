@@ -1,0 +1,5 @@
+[workspace]
+members = [
+  "src/services/memData/memData",
+  "src/services/memContent/memContent"
+]

@@ -1,11 +1,17 @@
-init stuff here 
+# Fluence Quickstart Template
 
-* spell (cronjob)
-* fetch subscriptions
-* data aggregator
-* (decider - for milestones)
-* publisher :
-    * create frame
-    * image to ipfs
-    * cid to nft contract
-    * cast frame 
+## Content
+
+- Default Marine service - `src/services`.
+- Basic aqua functions - `src/aqua`.
+- Fluence HTTP Gateway for proxying Aqua execution - `src/gateway`.
+
+## Usage
+
+```sh
+# You can deploy right away with an example worker that contains an example service
+fluence deploy
+
+# Run the deployed code
+fluence run -f 'runDeployedServices()'
+```

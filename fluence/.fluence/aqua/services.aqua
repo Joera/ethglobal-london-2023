@@ -1,0 +1,9 @@
+aqua Services declares *
+
+
+service MemData("memData"):
+  greeting(name: string) -> string
+
+
+service MemContent("memContent"):
+  greeting(name: string) -> string

@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=.fluence/schemas/fluence.json
+
+# Defines Fluence Project, most importantly - what exactly you want to deploy and how. You can use `fluence init` command to generate a template for new Fluence project
+
+# Documentation: https://github.com/fluencelabs/cli/tree/main/docs/configs/fluence.md
+
+version: 8
+
+deployments:
+  LondonSubscriptionWorkerV0:
+    targetWorkers: 3
+    pricePerWorkerEpoch: "0.0001"
+    initialBalance: "1"
+    services: [ memSubscriptions, memKubo ]
+    spells: [ scheduler ]
+  LondonDataWorkerV0:
+    targetWorkers: 3
+    pricePerWorkerEpoch: "0.0001"
+    initialBalance: "1"
+    services: [ memData ]
+    spells: []
+  LondonContentWorkerV0:
+    targetWorkers: 3
+    pricePerWorkerEpoch: "0.0001"
+    initialBalance: "1"
+    services: [ memContent]
+    spells: []
+
+aquaDependencies:
+  "@fluencelabs/aqua-lib": 0.9.1
+  "@fluencelabs/spell": 0.7.6
+
+services:
+  memSubscriptions:
+    get: src/services/memSubscriptions
+  memData:
+    get: src/services/memData
+  memContent:
+    get: src/services/memContent
+  memKubo:
+    get: src/services/memKubo
+
+relaysPath:
+  - src/gateway/src
+
+compileAqua:
+  gateway:
+    input: src/aqua
+    output: src/gateway/src/compiled-aqua
+    target: js
+
+spells:
+  scheduler:
+    get: src/spells/scheduler
