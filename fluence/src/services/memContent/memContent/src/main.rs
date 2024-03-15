@@ -7,6 +7,17 @@ module_manifest!();
 pub fn main() {}
 
 #[marine]
-pub fn greeting(name: String) -> String {
-    format!("Hi, {}", name)
+pub fn renderFrame() -> String {
+    format!("Hi")
 }
+
+#[marine]
+pub fn castFrame() -> String {
+    format!("Hi")
+}
+
+#[marine]   
+pub fn nft() -> String {
+    format!("Hi")
+}
+

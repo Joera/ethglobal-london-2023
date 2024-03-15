@@ -449,6 +449,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "curl-effector-imports"
+version = "0.1.0"
+source = "git+https://github.com/fluencelabs/effectors.git?branch=introduce-crates#8e2c1e73a96fc75c565f2faf0dc2496d33f9f655"
+dependencies = [
+ "curl-effector-types",
+ "marine-rs-sdk",
+]
+
+[[package]]
+name = "curl-effector-types"
+version = "0.1.0"
+source = "git+https://github.com/fluencelabs/effectors.git?branch=introduce-crates#8e2c1e73a96fc75c565f2faf0dc2496d33f9f655"
+dependencies = [
+ "marine-rs-sdk",
+]
+
+[[package]]
 name = "darling"
 version = "0.20.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -934,6 +951,23 @@ name = "io-lifetimes"
 version = "2.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a611371471e98973dbcab4e0ec66c31a10bc356eeb4d54a0e05eac8158fe38c"
+
+[[package]]
+name = "ipfs-effector-imports"
+version = "0.1.0"
+source = "git+https://github.com/fluencelabs/effectors.git?branch=introduce-crates#8e2c1e73a96fc75c565f2faf0dc2496d33f9f655"
+dependencies = [
+ "ipfs-effector-types",
+ "marine-rs-sdk",
+]
+
+[[package]]
+name = "ipfs-effector-types"
+version = "0.1.0"
+source = "git+https://github.com/fluencelabs/effectors.git?branch=introduce-crates#8e2c1e73a96fc75c565f2faf0dc2496d33f9f655"
+dependencies = [
+ "marine-rs-sdk",
+]
 
 [[package]]
 name = "ipnet"
@@ -1593,16 +1627,45 @@ checksum = "4facc753ae494aeb6e3c22f839b158aebd4f9270f55cd3c79906c45476c47ab4"
 name = "memContent"
 version = "0.1.0"
 dependencies = [
+ "curl-effector-imports",
  "marine-rs-sdk",
  "marine-rs-sdk-test",
+ "mem_types",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
 name = "memData"
 version = "0.1.0"
 dependencies = [
+ "curl-effector-imports",
  "marine-rs-sdk",
  "marine-rs-sdk-test",
+ "mem_types",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "memSubscriptions"
+version = "0.1.0"
+dependencies = [
+ "curl-effector-imports",
+ "marine-rs-sdk",
+ "marine-rs-sdk-test",
+ "mem_types",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "mem_types"
+version = "0.1.0"
+dependencies = [
+ "marine-rs-sdk",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -2267,6 +2330,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c06d3da6113f116aaee68e4d601191614c9053067f9ab7f6edbcb161237daa54"
 dependencies = [
  "once_cell",
+]
+
+[[package]]
+name = "tuKubo"
+version = "0.1.0"
+dependencies = [
+ "curl-effector-imports",
+ "ipfs-effector-imports",
+ "marine-rs-sdk",
+ "marine-rs-sdk-test",
 ]
 
 [[package]]

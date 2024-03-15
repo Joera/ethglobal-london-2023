@@ -7,7 +7,7 @@
 version: 8
 
 deployments:
-  LondonSubscriptionWorkerV0:
+  LondonMembersWorkerV0:
     targetWorkers: 3
     pricePerWorkerEpoch: "0.0001"
     initialBalance: "1"
@@ -29,6 +29,7 @@ deployments:
 aquaDependencies:
   "@fluencelabs/aqua-lib": 0.9.1
   "@fluencelabs/spell": 0.7.6
+  "@fluencelabs/aqua-ipfs": ^0.6.0
 
 services:
   memSubscriptions:

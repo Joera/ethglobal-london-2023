@@ -7,7 +7,7 @@ module_manifest!();
 pub fn main() {}
 
 #[marine]
-pub fn fetch(name: String) -> Vec<String> {
+pub fn fetch() -> Vec<String> {
 
     // get from subscription contract when enough time 
 

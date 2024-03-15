@@ -1,5 +1,7 @@
 [workspace]
 members = [
   "src/services/memData/memData",
-  "src/services/memContent/memContent"
+  "src/services/memContent/memContent",
+  "src/services/memSubscriptions/memSubscriptions",
+  "src/services/memKubo/modules/memKubo"
 ]
