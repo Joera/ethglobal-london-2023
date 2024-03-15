@@ -1,10 +1,19 @@
 aqua Scheduler
 
--- Note: spell main function must be exported
 export spell
+
 
 import Spell from "@fluencelabs/spell/spell_service.aqua"
 
+import "../../aqua/main.aqua"
+
+-- should create spell for each Member with init_args
+-- will allow for precise timing
+-- specific reporting
+-- how? 
+-- only through deployment, likely  
+
 func spell():
     Spell "scheduler"
-    Spell.store_log("Spell 'scheduler' is working!")
+    completed <- run()
+    Spell.store_log("Run completed!")

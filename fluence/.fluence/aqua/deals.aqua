@@ -16,27 +16,27 @@ data Deals:
 func get() -> Deals:
     <- Deals(
         londonMembersWorkerV0=?[Deal(
-            definition="bafkreic3e555kn5xe744rmxujaupjkjmx2e6cgvizactp4b4l2u36gcle4",
-            timestamp="2024-03-15T22:36:39.126Z",
-            dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
-            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b",
+            timestamp="2024-03-15T23:02:19.931Z",
+            definition="bafkreid37opetisqd4emw4er4damh5ibnqcfzez64efvt4hvzqjj7ngl5u",
             chainNetwork="local",
-            chainNetworkId=31337
+            chainNetworkId=31337,
+            dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
+            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b"
         )],
         londonDataWorkerV0=?[Deal(
+            timestamp="2024-03-15T23:02:24.056Z",
             definition="bafkreigtlclsh76pfyoyvlprbsiw3yw3hliner7pfq73opylyscu6ysrzq",
-            timestamp="2024-03-15T22:36:51.777Z",
-            dealIdOriginal="0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea",
-            dealId="18998c7e38ede4df09ceec08e5372bf8fe5719ea",
             chainNetwork="local",
-            chainNetworkId=31337
+            chainNetworkId=31337,
+            dealIdOriginal="0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea",
+            dealId="18998c7e38ede4df09ceec08e5372bf8fe5719ea"
         )],
         londonContentWorkerV0=?[Deal(
+            timestamp="2024-03-15T23:02:28.176Z",
             definition="bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq",
-            timestamp="2024-03-15T22:37:04.364Z",
-            dealIdOriginal="0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56",
-            dealId="2901bb75a1f4b0ac205cb2e68986a53e3480eb56",
             chainNetwork="local",
-            chainNetworkId=31337
+            chainNetworkId=31337,
+            dealIdOriginal="0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56",
+            dealId="2901bb75a1f4b0ac205cb2e68986a53e3480eb56"
         )]
     )

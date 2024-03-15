@@ -1,3 +1,4 @@
-# ethglobal-london-2023
+will cast the frame to farcaster 
 
-bla bla
+https://docs.farcaster.xyz/developers/guides/basics/hello-world
+

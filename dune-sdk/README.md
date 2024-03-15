@@ -1,6 +1,10 @@
-install hardhat 
+either the ts sdk 
 
-+ nft contract
+https://docs.dune.com/api-reference/overview/sdks
 
-+ subscription contract (kv store .. client + cid of 'subscription settings')
+or imo better:
+
+a curl request which can be done from a fluence service without much hassle 
+
+https://docs.dune.com/api-reference/executions/endpoint/get-execution-result
 

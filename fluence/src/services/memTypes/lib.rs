@@ -8,10 +8,12 @@ use marine_rs_sdk::marine;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct memSubscription {
     pub name: String
+    pub duneExecutionId: String
 }
 
 #[marine] 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct memContentObject {
-    pub projectName: String
+    pub memberName: String
+    pub data: String
 }

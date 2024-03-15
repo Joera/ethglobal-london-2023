@@ -1,34 +1,49 @@
 aqua Helpers declares * 
 
--- import "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/aqua-lib/builtin"
--- import "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/aqua-lib/subnet"
+import "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/aqua-lib/builtin"
+import "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/aqua-lib/subnet"
 
--- use "../../.fluence/aqua/deals.aqua"
+use "../../.fluence/aqua/deals.aqua"
 
--- func getContentWorkers() -> []Worker:
+func getMembersWorkers() -> []Worker:
 
---     deals <- Deals.get()
---     dealId = deals.LondonMembersWorkerV0!.dealIdOriginal
---     on HOST_PEER_ID:
---         subnet <- Subnet.resolve(dealId)
---     if subnet.success == false:
---         Console.print(["Failed to resolve subnet: ", subnet.error])
---     <- subnet.workers
+    deals <- Deals.get()
+    dealId = deals.londonMembersWorkerV0!.dealIdOriginal
+    on HOST_PEER_ID:
+        subnet <- Subnet.resolve(dealId)
+    if subnet.success == false:
+        Console.print(["Failed to resolve subnet: ", subnet.error])
+    <- subnet.workers
 
--- func randomContentWorker() -> Worker:
---     <- getContentWorkers()!
+func randomMembersWorker() -> Worker:
+    <- getMembersWorkers()!
 
--- func getRenderWorkers() -> []Worker:
+func getDataWorkers() -> []Worker:
 
---     deals <- Deals.get()
---     dealId = deals.renderWorkerV0!.dealIdOriginal
---     on HOST_PEER_ID:
---         subnet <- Subnet.resolve(dealId)
---     if subnet.success == false:
---         Console.print(["Failed to resolve subnet: ", subnet.error])
+    deals <- Deals.get()
+    dealId = deals.londonDataWorkerV0!.dealIdOriginal
+    on HOST_PEER_ID:
+        subnet <- Subnet.resolve(dealId)
+    if subnet.success == false:
+        Console.print(["Failed to resolve subnet: ", subnet.error])
     
---     <- subnet.workers
+    <- subnet.workers
 
--- func randomRenderWorker() -> Worker:
+func randomDataWorker() -> Worker:
 
---     <- getRenderWorkers()!
+    <- getDataWorkers()!
+
+func getContentWorkers() -> []Worker:
+
+    deals <- Deals.get()
+    dealId = deals.londonContentWorkerV0!.dealIdOriginal
+    on HOST_PEER_ID:
+        subnet <- Subnet.resolve(dealId)
+    if subnet.success == false:
+        Console.print(["Failed to resolve subnet: ", subnet.error])
+    
+    <- subnet.workers
+
+func randomContentWorker() -> Worker:
+
+    <- getContentWorkers()!

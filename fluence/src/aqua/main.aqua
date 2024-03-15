@@ -7,3 +7,38 @@ import "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/aqua-ipfs/ipf
 import "./helpers.aqua"
 import "./types.aqua"
 import "./services.aqua"
+
+import Spell, Log from "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/spell/spell_service.aqua"
+
+export run
+
+const REMOTEKUBO = "/ip4/143.176.14.172/tcp/15001"
+const SUBNETKUBO = "/dns4/ipfs/tcp/5001"
+
+func run() -> bool:
+
+    subscriptions: *MemSubscription
+    queue: *MemContentObject
+
+    logString = (s: string):
+        Console.print(s)
+
+    mw = randomMembersWorker()
+    Console.print(mw)
+    on mw.worker_id! via mw.host_id:
+        members = MemSubscriptions.fetch()
+        for cid <- members:
+            logString(cid)
+            res <- MemKubo.get(SUBNETKUBO, cid)
+            subscriptions <- MemSubscriptionFromJson.parse(res)
+
+    for sub <- subscriptions:
+
+        dw = randomDataWorker()
+        Console.print(dw)
+        on dw.worker_id! via dw.host_id:
+            queue <- MemData.add(sub)
+
+
+    <- true
+

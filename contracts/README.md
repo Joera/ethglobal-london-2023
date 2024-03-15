@@ -1,6 +1,6 @@
 install hardhat 
 
-+ nft contract
+* nft contract with cid of frame image
 
-+ subscription contract (kv store .. client + cid of 'subscription settings')
+* subscription contract (kv store .. client + cid of 'subscription settings')
 

@@ -1,3 +1,25 @@
 aqua Services declares *
 
 import "./types"
+
+service MemData("memData"):
+  add(subscription: MemSubscription) -> MemContentObject
+
+service MemContent("memContent"):
+  castFrame() -> string
+  nft() -> string
+  renderFrame() -> string
+
+service MemSubscriptions("memSubscriptions"):
+  fetch() -> []string
+
+service MemKubo("memKubo"):
+  add(ipfs_api: string, content: string) -> string
+  addFolders(ipfs_api: string, path: string) -> string
+  get(ipfs_api: string, cid: string) -> string
+  getFolders(ipfs_api: string, cid: string, path_: string) -> string
+  inspectParticleVault() -> []string
+  inspectParticleVaultFolder(path: string) -> []string
+
+service MemSubscriptionFromJson("json"):
+  parse(s: string) -> MemSubscription

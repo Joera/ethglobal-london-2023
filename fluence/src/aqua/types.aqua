@@ -1,1 +1,8 @@
 aqua Types declares *
+
+data MemSubscription:
+    name: string
+    duneExecutionId: string
+
+data MemContentObject:
+    memberName: string
