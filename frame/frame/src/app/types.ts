@@ -15,7 +15,7 @@ export interface MemCampaign {
     dune_query_id: string,
     timebase: string, // weekly / monthly / milestone
     milestone: string,
-    reached: Number,
+    reached: number,
     runs_untill: string
 }
 

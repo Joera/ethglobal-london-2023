@@ -33,26 +33,26 @@ pub fn add(subscription: MemSubscription) ->  Vec<MemContentObject> {
 
         let rows = &r_json["result"]["rows"];
 
-        let mut total_safes = 0;
+        // let mut total_safes = 0;
 
-        let mut weeks: Vec<types::Week> = vec!();
+        // let mut weeks: Vec<types::Week> = vec!();
 
-        for row in rows.as_array().iter() {
+        // for row in rows.as_array().iter() {
 
-            for r in row.iter().rev().collect() {
+        //     for r in row.iter() {
   
-                total_safes += r["num_safes"].as_u64().unwrap();
+        //        // total_safes += r["num_safes"].as_u64().unwrap();
 
-                let w = types::Week {
-                    date: r["week"].to_string(),
-                    value: total_safes.to_string()
-                };
+        //         let w = types::Week {
+        //             date: r["week"].to_string(),
+        //             value: "500".to_string()
+        //         };
 
-                weeks.push(w);
+        //         weeks.push(w);
 
-            }
+        //     }
         
-        }
+        // }
 
         
 
@@ -60,7 +60,7 @@ pub fn add(subscription: MemSubscription) ->  Vec<MemContentObject> {
         
         let o = MemContentObject {
             subscription,
-            data_object: serde_json::to_string(&weeks).unwrap()
+            data_object: serde_json::to_string(&rows).unwrap()
         };
 
         objects.push(o);

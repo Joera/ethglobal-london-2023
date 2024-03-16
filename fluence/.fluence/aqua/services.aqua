@@ -15,6 +15,8 @@ service MemSubscriptions("memSubscriptions"):
 
 
 data MemCampaign:
+  id: string
+  index: string
   dune_query_id: string
   timebase: string
   milestone: string

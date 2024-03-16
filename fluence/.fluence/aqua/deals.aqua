@@ -15,7 +15,28 @@ data Deals:
 
 func get() -> Deals:
     <- Deals(
-        londonMembersWorkerV0=nil,
-        londonDataWorkerV0=nil,
-        londonContentWorkerV0=nil
+        londonMembersWorkerV0=?[Deal(
+            timestamp="2024-03-16T22:06:05.023Z",
+            definition="bafkreigek5v2oqrjdp2rcazqyldmtzshhkwbgqhewekqq3pyhwbgi5cgxy",
+            chainNetwork="local",
+            chainNetworkId=31337,
+            dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
+            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b"
+        )],
+        londonDataWorkerV0=?[Deal(
+            timestamp="2024-03-16T22:06:09.157Z",
+            definition="bafkreigf6bodwpcd27efu2xbjh6fpotkxsh6lowf35qntu7lwn4pe65jma",
+            chainNetwork="local",
+            chainNetworkId=31337,
+            dealIdOriginal="0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea",
+            dealId="18998c7e38ede4df09ceec08e5372bf8fe5719ea"
+        )],
+        londonContentWorkerV0=?[Deal(
+            timestamp="2024-03-16T22:06:13.285Z",
+            definition="bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq",
+            chainNetwork="local",
+            chainNetworkId=31337,
+            dealIdOriginal="0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56",
+            dealId="2901bb75a1f4b0ac205cb2e68986a53e3480eb56"
+        )]
     )
