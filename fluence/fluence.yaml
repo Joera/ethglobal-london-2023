@@ -11,20 +11,20 @@ deployments:
     targetWorkers: 3
     pricePerWorkerEpoch: "0.0001"
     initialBalance: "1"
-    services: [ memSubscriptions, memKubo ]
+    services: [ test ]
     spells: [ scheduler ]
-  LondonDataWorkerV0:
-    targetWorkers: 3
-    pricePerWorkerEpoch: "0.0001"
-    initialBalance: "1"
-    services: [ memData ]
-    spells: []
-  LondonContentWorkerV0:
-    targetWorkers: 3
-    pricePerWorkerEpoch: "0.0001"
-    initialBalance: "1"
-    services: [ memContent]
-    spells: []
+  # LondonDataWorkerV0:
+  #   targetWorkers: 3
+  #   pricePerWorkerEpoch: "0.0001"
+  #   initialBalance: "1"
+  #   services: [ memData ]
+  #   spells: []
+  # LondonContentWorkerV0:
+  #   targetWorkers: 3
+  #   pricePerWorkerEpoch: "0.0001"
+  #   initialBalance: "1"
+  #   services: [ memContent ]
+  #   spells: []
 
 aquaDependencies:
   "@fluencelabs/aqua-lib": 0.9.1
@@ -40,6 +40,8 @@ services:
     get: src/services/memContent
   memKubo:
     get: src/services/memKubo
+  test:
+    get: src/services/test
 
 relaysPath:
   - src/gateway/src

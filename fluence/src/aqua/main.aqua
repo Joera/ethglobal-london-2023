@@ -10,17 +10,28 @@ import "./services.aqua"
 
 import Spell, Log from "../../.fluence/aqua-dependencies/node_modules/@fluencelabs/spell/spell_service.aqua"
 
-export run
+export run, subnet
 
 const REMOTEKUBO = "/ip4/143.176.14.172/tcp/15001"
 const SUBNETKUBO = "/dns4/ipfs/tcp/5001"
 
+func subnet() -> bool: 
+
+    wrkrs = getMembersWorkers()
+    Console.print(wrkrs)
+    <- true
+
 func run() -> bool:
 
+    Console.print("starting")
+
     subscriptions: *MemSubscription
-    queue: *MemContentObject
+    queue: *[]MemContentObject
 
     logString = (s: string):
+        Console.print(s)
+
+    logSub = (s: MemSubscription):
         Console.print(s)
 
     mw = randomMembersWorker()
@@ -30,9 +41,12 @@ func run() -> bool:
         for cid <- members:
             logString(cid)
             res <- MemKubo.get(SUBNETKUBO, cid)
+            logString(res)
             subscriptions <- MemSubscriptionFromJson.parse(res)
 
     for sub <- subscriptions:
+
+        logSub(sub)
 
         dw = randomDataWorker()
         Console.print(dw)

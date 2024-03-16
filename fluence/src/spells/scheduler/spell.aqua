@@ -15,5 +15,5 @@ import "../../aqua/main.aqua"
 
 func spell():
     Spell "scheduler"
-    completed <- run()
+  --  completed <- run()
     Spell.store_log("Run completed!")

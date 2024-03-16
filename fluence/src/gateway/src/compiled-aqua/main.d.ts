@@ -19,6 +19,10 @@ import {
 
 
 // Functions
+export type SubnetParams = [config?: {ttl?: number}] | [peer: IFluenceClient$$, config?: {ttl?: number}];
+
+export type SubnetResult = Promise<boolean>;
+
 export type RunParams = [config?: {ttl?: number}] | [peer: IFluenceClient$$, config?: {ttl?: number}];
 
 export type RunResult = Promise<boolean>;

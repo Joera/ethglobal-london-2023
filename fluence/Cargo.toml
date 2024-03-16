@@ -3,5 +3,6 @@ members = [
   "src/services/memData/memData",
   "src/services/memContent/memContent",
   "src/services/memSubscriptions/memSubscriptions",
-  "src/services/memKubo/modules/memKubo"
+  "src/services/memKubo/modules/memKubo",
+  "src/services/test/test"
 ]
