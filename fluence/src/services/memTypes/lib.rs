@@ -13,7 +13,7 @@ pub struct MemMemberAssets {
 
 #[marine] 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct MemPlan {
+pub struct MemCampaign {
     pub dune_query_id: String
     pub timebase: String // weekly / monthly / milestone
     pub milestone: String
@@ -25,7 +25,7 @@ pub struct MemPlan {
 pub struct MemSubscription:
     pub name: String
     pub assets: MemMemberAssets
-    pub plan:  MemPlan
+    pub campaign:  MemCampaign
 
 #[marine] 
 #[derive(Debug, Serialize, Deserialize)]

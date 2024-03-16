@@ -5,7 +5,7 @@ data MemMemberAssets:
     background_color: string
     graph_color: string
 
-data MemPlan:
+data MemCampaign:
     dune_query_id: string
     timebase: string --  weekly / monthly / milestone
     milestone: string
@@ -14,7 +14,7 @@ data MemPlan:
 data MemSubscription:
     name: string
     assets: MemMemberAssets
-    plan:  MemPlan
+    campaign: MemCampaign
 
 data MemContentObject:
     subscription: MemSubscription
