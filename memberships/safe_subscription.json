@@ -6,8 +6,11 @@
         "graph_color": "#0cb259"
     },
     "campaign": {
+        "id": "<campaigns-nfts-smart-contract-address>",
         "dune_query_id": "43918", 
         "timebase": "weekly",
+        "index": 1,
+        "reached": 0,
         "milestone": "10000",
         "runs_untill": ""
     }
