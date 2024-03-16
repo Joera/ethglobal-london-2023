@@ -14,7 +14,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
       const { campaignId, imageId } = params;
     */
     const dir = path.resolve('./public/img');
-    const data = fs.readFileSync(`${dir}/doggy.jpeg`);
+    const data = fs.readFileSync(`${dir}/chart.jpg`);
     const response = new NextResponse(data)
     response.headers.set('content-type', 'image/png');
     return response;
