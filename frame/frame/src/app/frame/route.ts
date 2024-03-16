@@ -4,10 +4,6 @@ import { mintNft, balanceOf } from "../utils/mint";
 
 import { PinataFDK } from "pinata-fdk";
 
-const INITIAL_FRAME_IMAGE_CID = "QmSYN7KT847Nado3fxFafYZgG6NXTMZwbaMvU9jhu5nPmJ";
-const NFT_MINT_SUCCESSFUL_IMAGE_CID = "QmUx3kQH4vR2t7mTmW3jHJgJgJGxjoBsMxt6z1fkZEHyHJ";
-const NFT_ALREADY_OWNED_IMAGE_CID = "QmaaEbtsetwamJwfFPAQAFC6FAE1xeYsvF7EBKA8NYMjP2";
-
 const fdk = new PinataFDK({
   pinata_jwt: process.env.PINATA_JWT as string,
   pinata_gateway: process.env.GATEWAY_URL as string,

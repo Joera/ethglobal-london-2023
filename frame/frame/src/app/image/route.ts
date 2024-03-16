@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import fs from 'fs'
+import path from 'path'
 
 export async function GET(req: NextRequest, res: NextResponse) {
   /*
@@ -12,12 +13,15 @@ export async function GET(req: NextRequest, res: NextResponse) {
       const url = new URL(req.url)
       const { campaignId, imageId } = getCampaignDataFromURL(url);
     */
-    const data = fs.readFileSync('doggy.jpeg');
+    const dir = path.resolve('./public/img');
+    const data = fs.readFileSync(`${dir}/doggy.jpeg`);
+    console.log("ARTUR: ", data);
     const response = new NextResponse(data)
     response.headers.set('content-type', 'image/png');
     return response;
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.log(error, __filename);
+    return NextResponse.json({ error: error });
   }
 }
 
