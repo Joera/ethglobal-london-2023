@@ -14,11 +14,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
       TODO: Return the stored image corresponding to the campaign and image id rather than the hardcoded image
       const { campaignId, imageId } = params;
     */
-    // const dir = path.resolve('./public/img');
-    // const data = fs.readFileSync(`${dir}/doggy.jpeg`);
-    // const response = new NextResponse(data)
-    // response.headers.set('content-type', 'image/png');
-    // return response;
+    const data = req.json();
     return new ImageResponse(
       (
         <div
@@ -32,10 +28,11 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
             background: 'lavender',
           }}
         >
-          Hello!
+          Milestone reached!
         </div>
       )
     )
+    
   } catch (error) {
     console.log(error, __filename);
     return NextResponse.json({ error: error });
