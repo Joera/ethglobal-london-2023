@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
+import { CampaignParams } from "@/app/types";
 import fs from 'fs'
 import path from 'path'
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest, { params }: { params: CampaignParams }) {
   /*
     This Api that returns the image for a campaign
   */
@@ -10,12 +11,10 @@ export async function GET(req: NextRequest, res: NextResponse) {
   try {
     /*
       TODO: Return the stored image corresponding to the campaign and image id rather than the hardcoded image
-      const url = new URL(req.url)
-      const { campaignId, imageId } = getCampaignDataFromURL(url);
+      const { campaignId, imageId } = params;
     */
     const dir = path.resolve('./public/img');
     const data = fs.readFileSync(`${dir}/doggy.jpeg`);
-    console.log("ARTUR: ", data);
     const response = new NextResponse(data)
     response.headers.set('content-type', 'image/png');
     return response;
@@ -25,15 +24,14 @@ export async function GET(req: NextRequest, res: NextResponse) {
   }
 }
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest, { params }: { params: CampaignParams }) {
   /*
     This Api that is called with campaign data and creates and stores the frame image based on it.
     It should return the url of the corresponding frame
   */
   
     const body = await req.json();
-    const campaignId = body.campaign.id;
-    const imageId = body.campaign.index;
+    const { campaignId, imageId } = params;
 
     // TODO: Generate and store the image
 

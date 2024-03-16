@@ -1,26 +1,21 @@
 import { NextRequest, NextResponse } from "next/server"
-import { getConnectedAddressForUser } from "../utils/fc";
-import { mintNft, balanceOf } from "../utils/mint";
+import { getConnectedAddressForUser } from "../../../utils/fc";
+import { mintNft, balanceOf } from "../../../utils/mint";
+import { CampaignParams } from "@/app/types";
 
-import { PinataFDK } from "pinata-fdk";
+import { PinataFDK } from "pinata-fdk"; 
 
 const fdk = new PinataFDK({
   pinata_jwt: process.env.PINATA_JWT as string,
   pinata_gateway: process.env.GATEWAY_URL as string,
 });
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest, { params }: { params: CampaignParams }) {
   /*
     This API returns the frame metadata
   */ 
   try {
-    /* 
-    TODO: Use a campaignId and imageId query params instead of hardcoding them
-    const url = new URL(req.url)
-    const { campaignId, imageId } = getCampaignDataFromURL(url);
-    */
-    const campaignId = '1'; // Campaign id in the end product will be the smart contract address of the campaign's NFT
-    const imageId = 1;
+    const { campaignId, imageId } = params;
     /*
     TODO: We should only have the Mint button, if the campaign's milestone has been reached. Otherwise, it should just be an info image about the current state;
     */
@@ -39,7 +34,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
   }
 }
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest, { params }: { params: CampaignParams }) {
   /*
     This Api is called by the Mint button in the campaign frame
   */
@@ -51,8 +46,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const url = new URL(req.url)
   const { campaignId, imageId } = getCampaignDataFromURL(url);
   */
-  const campaignId = '1'; // Campaign id in the end product will be the smart contract address of the campaign's NFT
-  const imageId = 1;
+  const { campaignId, imageId } = params;
   const balance = await balanceOf(address, campaignId);
 
   if (typeof balance === "number" && balance !== null && balance < 1) {
