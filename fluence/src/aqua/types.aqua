@@ -1,8 +1,34 @@
 aqua Types declares *
 
+data MemMemberAssets: 
+    logo: string
+    background_color: string
+    graph_color: string
+
+data MemPlan:
+    dune_query_id: string
+    timebase: string --  weekly / monthly / milestone
+    milestone: string
+    runs_untill: string
+
 data MemSubscription:
     name: string
-    duneExecutionId: string
+    assets: MemMemberAssets
+    plan:  MemPlan
 
 data MemContentObject:
-    memberName: string
+    subscription: MemSubscription
+    data_object: string
+
+-- graphs: [
+--     {
+--        valueName: string,
+--         datq: [
+--         ]
+--     },
+--     {
+--        valueName: string,
+--         datq: [
+--         ]
+--     },
+-- ]
