@@ -1,0 +1,14 @@
+{
+    "name": "Safe wallet",
+    "assets": {
+        "logo": "somelink",
+        "background_color": "#000",
+        "graph_color": "#0cb259"
+    },
+    "plan": {
+        "dune_query_id": "43918", 
+        "timebase": "weekly",
+        "milestone": "10000",
+        "runs_untill": ""
+    }
+}
