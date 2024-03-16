@@ -6,6 +6,8 @@ data MemMemberAssets:
     graph_color: string
 
 data MemCampaign:
+    id: string
+    index: string
     dune_query_id: string
     timebase: string --  weekly / monthly / milestone
     milestone: string

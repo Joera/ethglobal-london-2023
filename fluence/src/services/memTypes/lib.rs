@@ -16,6 +16,8 @@ pub struct MemMemberAssets {
 #[marine] 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MemCampaign {
+    pub id: String,
+    pub index: String,
     pub dune_query_id: String,
     pub timebase: String, // weekly / monthly / milestone
     pub milestone: String,
