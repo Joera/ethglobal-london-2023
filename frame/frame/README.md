@@ -17,3 +17,5 @@ To deploy:
 ```bash
 vercel --prod
 ```
+
+Current deployment is at https://memorable-eth-frame.vercel.app/
