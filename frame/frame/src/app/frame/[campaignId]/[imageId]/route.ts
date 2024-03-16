@@ -70,7 +70,7 @@ export async function POST(req: NextRequest, { params }: { params: CampaignParam
     // the user already has the NFT
     // just show the image of the NFT
     const frameMetadata = await fdk.getFrameMetadata({
-      aspect_ratio: "1:1",
+      aspect_ratio: "1.91:1",
       image: {
         url: `${process.env.BASE_URL}/image/${campaignId}/${imageId}`
       },
