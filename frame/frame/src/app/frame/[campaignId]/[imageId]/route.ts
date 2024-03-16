@@ -22,7 +22,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
     const frameMetadata = await fdk.getFrameMetadata({
       post_url: `${process.env.BASE_URL}/frame/${campaignId}/${imageId}`,
       buttons: [{ label: "Mint", action: "post" }],
-      aspect_ratio: "1:1",
+      aspect_ratio: "1.91:1",
       image: {
         url: `${process.env.BASE_URL}/image/${campaignId}/${imageId}`
       },
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest, { params }: { params: CampaignParam
       // campaignId is the address of the campaign NFT's smart contract
       const mint = await mintNft(address, campaignId);
       const frameMetadata = await fdk.getFrameMetadata({
-        aspect_ratio: "1:1",
+        aspect_ratio: "1.91:1",
         image: {
           url: `${process.env.BASE_URL}/image/${campaignId}/${imageId}`
         },
