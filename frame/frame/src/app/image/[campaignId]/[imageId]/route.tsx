@@ -14,7 +14,6 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
       TODO: Return the stored image corresponding to the campaign and image id rather than the hardcoded image
       const { campaignId, imageId } = params;
     */
-    const data = req.json();
     return new ImageResponse(
       (
         <div
