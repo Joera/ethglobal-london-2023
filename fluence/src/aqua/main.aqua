@@ -34,6 +34,9 @@ func run() -> bool:
     logSub = (s: MemSubscription):
         Console.print(s)
 
+    logCo = (s: MemContentObject):
+        Console.print(s)
+
     mw = randomMembersWorker()
     Console.print(mw)
     on mw.worker_id! via mw.host_id:
@@ -52,7 +55,14 @@ func run() -> bool:
         Console.print(dw)
         on dw.worker_id! via dw.host_id:
             queue <- MemData.add(sub)
+            -- for error <- errors:
+            --     logString(error)
+            -- greeting <- Test.greeting("Artur")
+            -- logString(greeting)
 
+    for q <- queue:
+        for obj <- q:
+            logCo(obj)
 
     <- true
 

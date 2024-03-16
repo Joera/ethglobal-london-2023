@@ -16,16 +16,16 @@ data Deals:
 func get() -> Deals:
     <- Deals(
         londonMembersWorkerV0=?[Deal(
-            timestamp="2024-03-16T11:08:19.395Z",
-            definition="bafkreibgmy3vpq6xcfqwsqmecmihmk5aw3rhmgjfswtw4tyw5pzn34mp6u",
-            chainNetwork="local",
-            chainNetworkId=31337,
+            definition="bafkreihh755vtjwm2emat2rcr7yh3ocvlnswise4eu6qlbj6nfshxravba",
+            timestamp="2024-03-16T17:11:14.829Z",
             dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
-            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b"
+            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b",
+            chainNetwork="local",
+            chainNetworkId=31337
         )],
         londonDataWorkerV0=?[Deal(
-            definition="bafkreieyhrkqht6x7y7tspq7dboy2xd57whjcenrtcfgcdqsdeyzllo2ry",
-            timestamp="2024-03-16T11:03:30.169Z",
+            definition="bafkreiedbr75ux3kxo2hpuqh7vwv7cyha2enbcrhqg4l7lawocz54d72cm",
+            timestamp="2024-03-16T17:11:27.515Z",
             dealIdOriginal="0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea",
             dealId="18998c7e38ede4df09ceec08e5372bf8fe5719ea",
             chainNetwork="local",
@@ -33,7 +33,7 @@ func get() -> Deals:
         )],
         londonContentWorkerV0=?[Deal(
             definition="bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq",
-            timestamp="2024-03-16T11:03:34.316Z",
+            timestamp="2024-03-16T17:11:40.093Z",
             dealIdOriginal="0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56",
             dealId="2901bb75a1f4b0ac205cb2e68986a53e3480eb56",
             chainNetwork="local",

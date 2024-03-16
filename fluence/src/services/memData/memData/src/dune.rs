@@ -7,6 +7,8 @@ use crate::vault;
 
 use crate::types;
 
+static KEY : &str = "NyAl6eYL2taSpLkdJDwLJmobNCpn1jnw";
+
 pub fn post(query_id: &String, target_path: &String) -> CurlResult {
 
     let url = format!("https://api.dune.com/api/v1/query/{}/execute", &query_id);
@@ -35,20 +37,14 @@ pub fn post(query_id: &String, target_path: &String) -> CurlResult {
    
 }
 
-pub fn get(execution_id: String, target_path: &String) -> CurlResult {
+pub fn get(query_id: &String, target_path: &String) -> CurlResult {
 
-    let url = format!("https://api.dune.com/api/v1/execution/{}/results", &execution_id);
+   // let url = format!("https://api.dune.com/api/v1/execution/{}/results", &execution_id);
+    let url = format!("https://api.dune.com/api/v1/query/{}/results?limit=1000", query_id);
     
-    
-
-    // let h = HttpHeader {    let h = HttpHeader {
-    //     name: "Content-Type".to_string(),
-    //     value: "application/json".to_string()
-    // };
-
     let hh = HttpHeader {
         name: "X-DUNE-API-KEY".to_string(),
-        value: "".to_string()
+        value: KEY.to_string()
     };
 
     let request = CurlRequest {

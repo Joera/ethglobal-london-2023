@@ -23,3 +23,6 @@ service MemKubo("memKubo"):
 
 service MemSubscriptionFromJson("json"):
   parse(s: string) -> MemSubscription
+
+service Test("test"):
+  greeting(name: string) -> string

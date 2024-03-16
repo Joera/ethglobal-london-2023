@@ -9,3 +9,6 @@ version: 0
 type: rust
 
 name: memData
+
+volumes:
+  /tmp/vault: /tmp

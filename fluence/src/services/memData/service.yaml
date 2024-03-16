@@ -11,3 +11,5 @@ name: memData
 modules:
   facade:
     get: memData
+  curl_effector:
+    get: curl_effector/
