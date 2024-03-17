@@ -7,18 +7,6 @@ import contractAbi from "./contract.json";
 // const account = privateKeyToAccount((process.env.PRIVATE_KEY as `0x`) || "");
 const account = "" as '0x';
 
-<<<<<<< HEAD
-export const publicClient = createPublicClient({
-  // chain: baseSepolia,
-  transport: http(process.env.ALCHEMY_URL),
-});
-
-const walletClient = createWalletClient({
-  account,
-  // chain: baseSepolia,
-  transport: http(process.env.ALCHEMY_URL),
-});
-=======
 // export const publicClient = createPublicClient({
 //   chain: baseSepolia,
 //   transport: http(process.env.ALCHEMY_URL),
@@ -29,7 +17,6 @@ const walletClient = createWalletClient({
 //   chain: baseSepolia,
 //   transport: http(process.env.ALCHEMY_URL),
 // });
->>>>>>> 284d2daf692901b91bce9a1f27b9a9f85398102a
 
 export async function mintNft(userAddress: string, nftSmartContractAddress: string) {
   // try {
