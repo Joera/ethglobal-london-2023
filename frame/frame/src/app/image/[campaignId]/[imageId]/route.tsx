@@ -10,6 +10,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
   /*
     This Api that returns the image for a campaign
   */
+
     const mocked : MemContentObject = {
       
       "subscription": {
@@ -56,6 +57,8 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
     }
 
     let data = weeks.reverse().slice(0,8);
+
+    console.log(data);
 
     const logo = "profile_img_029ff791-8701-4324-b4e0-b441af1c9aef_sjoiq.png";
 
@@ -286,7 +289,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
 
     } else {
 
-    return new ImageResponse(
+    let image = new ImageResponse(
       (
         <div
           style={{
@@ -468,6 +471,9 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
         </div>
       )
     )
+
+
+    return image;
 
     }
     

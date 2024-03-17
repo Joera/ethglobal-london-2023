@@ -7,9 +7,10 @@ data MemMemberAssets:
 
 data MemCampaign:
     id: string
-    index: string
     dune_query_id: string
     timebase: string --  weekly / monthly / milestone
+    index: u8
+    reached: u8
     milestone: string
     runs_untill: string
 
@@ -21,16 +22,3 @@ data MemSubscription:
 data MemContentObject:
     subscription: MemSubscription
     data_object: string
-
--- graphs: [
---     {
---        valueName: string,
---         datq: [
---         ]
---     },
---     {
---        valueName: string,
---         datq: [
---         ]
---     },
--- ]

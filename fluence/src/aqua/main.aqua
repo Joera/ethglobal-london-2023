@@ -21,7 +21,7 @@ func subnet() -> bool:
     Console.print(wrkrs)
     <- true
 
-func run() -> bool:
+func run(campaignCid: string) -> bool:
 
     Console.print("starting")
 
@@ -42,27 +42,30 @@ func run() -> bool:
     on mw.worker_id! via mw.host_id:
         members = MemSubscriptions.fetch()
         for cid <- members:
-            logString(cid)
+            logString(campaignCid)
             res <- MemKubo.get(SUBNETKUBO, cid)
             logString(res)
             subscriptions <- MemSubscriptionFromJson.parse(res)
 
     for sub <- subscriptions:
-
         logSub(sub)
-
         dw = randomDataWorker()
         Console.print(dw)
         on dw.worker_id! via dw.host_id:
             queue <- MemData.add(sub)
-            -- for error <- errors:
-            --     logString(error)
-            -- greeting <- Test.greeting("Artur")
-            -- logString(greeting)
+           
 
-    for q <- queue:
-        for obj <- q:
-            logCo(obj)
+    for qq <- queue:
+        for q <- qq:
+            logCo(q)
+            cw = randomContentWorker()
+            Console.print(cw)
+            on cw.worker_id! via cw.host_id:
+                frame_url = MemContent.create(q)
+                logString(frame_url)
+                -- MemContent.nft()
+                -- MemContent.castFrame()
+
 
     <- true
 

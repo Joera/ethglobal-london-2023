@@ -23,7 +23,7 @@ export type SubnetParams = [config?: {ttl?: number}] | [peer: IFluenceClient$$, 
 
 export type SubnetResult = Promise<boolean>;
 
-export type RunParams = [config?: {ttl?: number}] | [peer: IFluenceClient$$, config?: {ttl?: number}];
+export type RunParams = [campaignCid: string, config?: {ttl?: number}] | [peer: IFluenceClient$$, campaignCid: string, config?: {ttl?: number}];
 
 export type RunResult = Promise<boolean>;
 

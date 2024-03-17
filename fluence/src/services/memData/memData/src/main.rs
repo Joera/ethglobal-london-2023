@@ -2,7 +2,7 @@
 use marine_rs_sdk::marine;
 use marine_rs_sdk::module_manifest;
 use serde_json;
-use serde_json::Value;
+use serde_json::{Value, json};
 use mem_types::{MemSubscription, MemContentObject};
 use std::fs;
 
@@ -44,8 +44,8 @@ pub fn add(subscription: MemSubscription) ->  Vec<MemContentObject> {
         //        // total_safes += r["num_safes"].as_u64().unwrap();
 
         //         let w = types::Week {
-        //             date: r["week"].to_string(),
-        //             value: "500".to_string()
+        //             "date": r["week"].to_string(),
+        //             "value": "500".to_string()
         //         };
 
         //         weeks.push(w);
@@ -54,7 +54,17 @@ pub fn add(subscription: MemSubscription) ->  Vec<MemContentObject> {
         
         // }
 
-        
+        let mockedData = json!([
+            { "date": "2024-03-11 00:00:00.000 UTC", "value": 7380335 },
+            { "date": "2024-03-04 00:00:00.000 UTC", "value": 7202740 },
+            { "date": "2024-02-26 00:00:00.000 UTC", "value": 6923208 },
+            { "date": "2024-02-19 00:00:00.000 UTC", "value": 6662470 },
+            { "date": "2024-02-12 00:00:00.000 UTC", "value": 6349773 },
+            { "date": "2024-02-05 00:00:00.000 UTC", "value": 6207893 },
+            { "date": "2024-01-29 00:00:00.000 UTC", "value": 6105595 },
+            { "date": "2024-01-22 00:00:00.000 UTC", "value": 5990306 }
+        ]);
+          
 
         
         

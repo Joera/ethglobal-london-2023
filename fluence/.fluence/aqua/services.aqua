@@ -16,9 +16,10 @@ service MemSubscriptions("memSubscriptions"):
 
 data MemCampaign:
   id: string
-  index: string
+  index: u8
   dune_query_id: string
   timebase: string
+  reached: u8
   milestone: string
   runs_untill: string
 
@@ -40,10 +41,33 @@ service MemData("memData"):
   add(subscription: MemSubscription) -> []MemContentObject
 
 
+data MemCampaign:
+  id: string
+  index: u8
+  dune_query_id: string
+  timebase: string
+  reached: u8
+  milestone: string
+  runs_untill: string
+
+data MemMemberAssets:
+  logo: string
+  background_color: string
+  graph_color: string
+
+data MemSubscription:
+  name: string
+  assets: MemMemberAssets
+  campaign: MemCampaign
+
+data MemContentObject:
+  subscription: MemSubscription
+  data_object: string
+
 service MemContent("memContent"):
   castFrame() -> string
+  create(content_object: MemContentObject) -> string
   nft() -> string
-  renderFrame() -> string
 
 
 service Test("test"):

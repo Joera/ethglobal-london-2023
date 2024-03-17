@@ -50,9 +50,9 @@ export const subnet_script = `
                     )
                     (ap ("dealIdOriginal" "0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56") %Deal_obj_map)
                    )
-                   (ap ("definition" "bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq") %Deal_obj_map)
+                   (ap ("definition" "bafkreigtqodqs2vcg56t7jymph7mo6cmmoex7de3kxdmpgi57hpwitp6o4") %Deal_obj_map)
                   )
-                  (ap ("timestamp" "2024-03-16T22:06:13.285Z") %Deal_obj_map)
+                  (ap ("timestamp" "2024-03-17T03:24:27.502Z") %Deal_obj_map)
                  )
                  (canon %init_peer_id% %Deal_obj_map  Deal_obj)
                 )
@@ -82,9 +82,9 @@ export const subnet_script = `
                     )
                     (ap ("dealIdOriginal" "0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea") %Deal_obj-0_map)
                    )
-                   (ap ("definition" "bafkreigf6bodwpcd27efu2xbjh6fpotkxsh6lowf35qntu7lwn4pe65jma") %Deal_obj-0_map)
+                   (ap ("definition" "bafkreiafv5fjgtjrvhnnbaprdhtprx3uibmni6jmhfvlgudh54n7inhwaq") %Deal_obj-0_map)
                   )
-                  (ap ("timestamp" "2024-03-16T22:06:09.157Z") %Deal_obj-0_map)
+                  (ap ("timestamp" "2024-03-17T03:24:23.350Z") %Deal_obj-0_map)
                  )
                  (canon %init_peer_id% %Deal_obj-0_map  Deal_obj-0)
                 )
@@ -115,9 +115,9 @@ export const subnet_script = `
                    )
                    (ap ("dealIdOriginal" "0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B") %Deal_obj-1_map)
                   )
-                  (ap ("definition" "bafkreigek5v2oqrjdp2rcazqyldmtzshhkwbgqhewekqq3pyhwbgi5cgxy") %Deal_obj-1_map)
+                  (ap ("definition" "bafkreid5kfpzbz3rx4gyoysrho7z77a3nyd7cqc3c2a6sqfq4rvvphj674") %Deal_obj-1_map)
                  )
-                 (ap ("timestamp" "2024-03-16T22:06:05.023Z") %Deal_obj-1_map)
+                 (ap ("timestamp" "2024-03-17T03:24:19.223Z") %Deal_obj-1_map)
                 )
                 (canon %init_peer_id% %Deal_obj-1_map  Deal_obj-1)
                )
@@ -232,9 +232,12 @@ export const run_script = `
 (xor
  (seq
   (seq
-   (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
-   (new $queue
-    (new $subscriptions
+   (seq
+    (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
+    (call %init_peer_id% ("getDataSrv" "campaignCid") [] -campaignCid-arg-)
+   )
+   (new $subscriptions
+    (new $queue
      (seq
       (seq
        (seq
@@ -268,9 +271,9 @@ export const run_script = `
                             )
                             (ap ("dealIdOriginal" "0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56") %Deal_obj_map)
                            )
-                           (ap ("definition" "bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq") %Deal_obj_map)
+                           (ap ("definition" "bafkreigtqodqs2vcg56t7jymph7mo6cmmoex7de3kxdmpgi57hpwitp6o4") %Deal_obj_map)
                           )
-                          (ap ("timestamp" "2024-03-16T22:06:13.285Z") %Deal_obj_map)
+                          (ap ("timestamp" "2024-03-17T03:24:27.502Z") %Deal_obj_map)
                          )
                          (canon %init_peer_id% %Deal_obj_map  Deal_obj)
                         )
@@ -300,9 +303,9 @@ export const run_script = `
                             )
                             (ap ("dealIdOriginal" "0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea") %Deal_obj-0_map)
                            )
-                           (ap ("definition" "bafkreigf6bodwpcd27efu2xbjh6fpotkxsh6lowf35qntu7lwn4pe65jma") %Deal_obj-0_map)
+                           (ap ("definition" "bafkreiafv5fjgtjrvhnnbaprdhtprx3uibmni6jmhfvlgudh54n7inhwaq") %Deal_obj-0_map)
                           )
-                          (ap ("timestamp" "2024-03-16T22:06:09.157Z") %Deal_obj-0_map)
+                          (ap ("timestamp" "2024-03-17T03:24:23.350Z") %Deal_obj-0_map)
                          )
                          (canon %init_peer_id% %Deal_obj-0_map  Deal_obj-0)
                         )
@@ -333,9 +336,9 @@ export const run_script = `
                            )
                            (ap ("dealIdOriginal" "0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B") %Deal_obj-1_map)
                           )
-                          (ap ("definition" "bafkreigek5v2oqrjdp2rcazqyldmtzshhkwbgqhewekqq3pyhwbgi5cgxy") %Deal_obj-1_map)
+                          (ap ("definition" "bafkreid5kfpzbz3rx4gyoysrho7z77a3nyd7cqc3c2a6sqfq4rvvphj674") %Deal_obj-1_map)
                          )
-                         (ap ("timestamp" "2024-03-16T22:06:05.023Z") %Deal_obj-1_map)
+                         (ap ("timestamp" "2024-03-17T03:24:19.223Z") %Deal_obj-1_map)
                         )
                         (canon %init_peer_id% %Deal_obj-1_map  Deal_obj-1)
                        )
@@ -448,7 +451,7 @@ export const run_script = `
                              )
                             )
                            )
-                           (call %init_peer_id% ("run-console" "print") [cid-0])
+                           (call %init_peer_id% ("run-console" "print") [-campaignCid-arg-])
                           )
                           (new $-ephemeral-stream-
                            (new #-ephemeral-canon-
@@ -568,9 +571,9 @@ export const run_script = `
                              )
                              (ap ("dealIdOriginal" "0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56") %Deal_obj-2_map)
                             )
-                            (ap ("definition" "bafkreiccejrvu52iid7etblg4rscfhpiw3v64ycbf3igcoew26ycaytgnq") %Deal_obj-2_map)
+                            (ap ("definition" "bafkreigtqodqs2vcg56t7jymph7mo6cmmoex7de3kxdmpgi57hpwitp6o4") %Deal_obj-2_map)
                            )
-                           (ap ("timestamp" "2024-03-16T22:06:13.285Z") %Deal_obj-2_map)
+                           (ap ("timestamp" "2024-03-17T03:24:27.502Z") %Deal_obj-2_map)
                           )
                           (canon %init_peer_id% %Deal_obj-2_map  Deal_obj-2)
                          )
@@ -600,9 +603,9 @@ export const run_script = `
                              )
                              (ap ("dealIdOriginal" "0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea") %Deal_obj-3_map)
                             )
-                            (ap ("definition" "bafkreigf6bodwpcd27efu2xbjh6fpotkxsh6lowf35qntu7lwn4pe65jma") %Deal_obj-3_map)
+                            (ap ("definition" "bafkreiafv5fjgtjrvhnnbaprdhtprx3uibmni6jmhfvlgudh54n7inhwaq") %Deal_obj-3_map)
                            )
-                           (ap ("timestamp" "2024-03-16T22:06:09.157Z") %Deal_obj-3_map)
+                           (ap ("timestamp" "2024-03-17T03:24:23.350Z") %Deal_obj-3_map)
                           )
                           (canon %init_peer_id% %Deal_obj-3_map  Deal_obj-3)
                          )
@@ -633,9 +636,9 @@ export const run_script = `
                             )
                             (ap ("dealIdOriginal" "0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B") %Deal_obj-4_map)
                            )
-                           (ap ("definition" "bafkreigek5v2oqrjdp2rcazqyldmtzshhkwbgqhewekqq3pyhwbgi5cgxy") %Deal_obj-4_map)
+                           (ap ("definition" "bafkreid5kfpzbz3rx4gyoysrho7z77a3nyd7cqc3c2a6sqfq4rvvphj674") %Deal_obj-4_map)
                           )
-                          (ap ("timestamp" "2024-03-16T22:06:05.023Z") %Deal_obj-4_map)
+                          (ap ("timestamp" "2024-03-17T03:24:19.223Z") %Deal_obj-4_map)
                          )
                          (canon %init_peer_id% %Deal_obj-4_map  Deal_obj-4)
                         )
@@ -710,23 +713,20 @@ export const run_script = `
               (seq
                (seq
                 (seq
-                 (seq
-                  (new $-ephemeral-stream-
-                   (new #-ephemeral-canon-
-                    (canon -relay- $-ephemeral-stream-  #-ephemeral-canon-)
-                   )
-                  )
-                  (new $-ephemeral-stream-
-                   (new #-ephemeral-canon-
-                    (canon ret-3_flat.$.[0].host_id $-ephemeral-stream-  #-ephemeral-canon-)
-                   )
+                 (new $-ephemeral-stream-
+                  (new #-ephemeral-canon-
+                   (canon -relay- $-ephemeral-stream-  #-ephemeral-canon-)
                   )
                  )
-                 (call ret-3_flat.$.[0].worker_id.[0] ("memData" "add") [sub-0] $ret)
+                 (new $-ephemeral-stream-
+                  (new #-ephemeral-canon-
+                   (canon ret-3_flat.$.[0].host_id $-ephemeral-stream-  #-ephemeral-canon-)
+                  )
+                 )
                 )
-                (canon ret-3_flat.$.[0].worker_id.[0] $ret  #push-to-stream-197)
+                (call ret-3_flat.$.[0].worker_id.[0] ("memData" "add") [sub-0] ret-4)
                )
-               (ap #push-to-stream-197 $queue)
+               (ap ret-4 $queue)
               )
               (new $-ephemeral-stream-
                (new #-ephemeral-canon-
@@ -771,16 +771,237 @@ export const run_script = `
        )
        (canon %init_peer_id% $queue  #queue_canon)
       )
-      (fold #queue_canon q-0
+      (fold #queue_canon qq-0
        (seq
-        (fold q-0 obj-0
+        (fold qq-0 q-0
          (seq
-          (call %init_peer_id% ("run-console" "print") [obj-0])
-          (next obj-0)
+          (seq
+           (seq
+            (seq
+             (seq
+              (seq
+               (seq
+                (seq
+                 (seq
+                  (seq
+                   (call %init_peer_id% ("run-console" "print") [q-0])
+                   (par
+                    (par
+                     (new $option-inline-6
+                      (seq
+                       (seq
+                        (new %Deal_obj-5_map
+                         (seq
+                          (seq
+                           (seq
+                            (seq
+                             (seq
+                              (seq
+                               (ap ("chainNetwork" "local") %Deal_obj-5_map)
+                               (ap ("chainNetworkId" 31337) %Deal_obj-5_map)
+                              )
+                              (ap ("dealId" "2901bb75a1f4b0ac205cb2e68986a53e3480eb56") %Deal_obj-5_map)
+                             )
+                             (ap ("dealIdOriginal" "0x2901bb75a1f4B0ac205CB2e68986A53E3480eB56") %Deal_obj-5_map)
+                            )
+                            (ap ("definition" "bafkreigtqodqs2vcg56t7jymph7mo6cmmoex7de3kxdmpgi57hpwitp6o4") %Deal_obj-5_map)
+                           )
+                           (ap ("timestamp" "2024-03-17T03:24:27.502Z") %Deal_obj-5_map)
+                          )
+                          (canon %init_peer_id% %Deal_obj-5_map  Deal_obj-5)
+                         )
+                        )
+                        (xor
+                         (ap Deal_obj-5 $option-inline-6)
+                         (null)
+                        )
+                       )
+                       (canon %init_peer_id% $option-inline-6  #option-inline-6-0)
+                      )
+                     )
+                     (new $option-inline-7
+                      (seq
+                       (seq
+                        (new %Deal_obj-6_map
+                         (seq
+                          (seq
+                           (seq
+                            (seq
+                             (seq
+                              (seq
+                               (ap ("chainNetwork" "local") %Deal_obj-6_map)
+                               (ap ("chainNetworkId" 31337) %Deal_obj-6_map)
+                              )
+                              (ap ("dealId" "18998c7e38ede4df09ceec08e5372bf8fe5719ea") %Deal_obj-6_map)
+                             )
+                             (ap ("dealIdOriginal" "0x18998c7E38ede4dF09cEec08E5372Bf8fe5719ea") %Deal_obj-6_map)
+                            )
+                            (ap ("definition" "bafkreiafv5fjgtjrvhnnbaprdhtprx3uibmni6jmhfvlgudh54n7inhwaq") %Deal_obj-6_map)
+                           )
+                           (ap ("timestamp" "2024-03-17T03:24:23.350Z") %Deal_obj-6_map)
+                          )
+                          (canon %init_peer_id% %Deal_obj-6_map  Deal_obj-6)
+                         )
+                        )
+                        (xor
+                         (ap Deal_obj-6 $option-inline-7)
+                         (null)
+                        )
+                       )
+                       (canon %init_peer_id% $option-inline-7  #option-inline-7-0)
+                      )
+                     )
+                    )
+                    (new $option-inline-8
+                     (seq
+                      (seq
+                       (new %Deal_obj-7_map
+                        (seq
+                         (seq
+                          (seq
+                           (seq
+                            (seq
+                             (seq
+                              (ap ("chainNetwork" "local") %Deal_obj-7_map)
+                              (ap ("chainNetworkId" 31337) %Deal_obj-7_map)
+                             )
+                             (ap ("dealId" "ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b") %Deal_obj-7_map)
+                            )
+                            (ap ("dealIdOriginal" "0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B") %Deal_obj-7_map)
+                           )
+                           (ap ("definition" "bafkreid5kfpzbz3rx4gyoysrho7z77a3nyd7cqc3c2a6sqfq4rvvphj674") %Deal_obj-7_map)
+                          )
+                          (ap ("timestamp" "2024-03-17T03:24:19.223Z") %Deal_obj-7_map)
+                         )
+                         (canon %init_peer_id% %Deal_obj-7_map  Deal_obj-7)
+                        )
+                       )
+                       (xor
+                        (ap Deal_obj-7 $option-inline-8)
+                        (null)
+                       )
+                      )
+                      (canon %init_peer_id% $option-inline-8  #option-inline-8-0)
+                     )
+                    )
+                   )
+                  )
+                  (new %Deals_obj-1_map
+                   (seq
+                    (seq
+                     (seq
+                      (ap ("londonContentWorkerV0" #option-inline-6-0) %Deals_obj-1_map)
+                      (ap ("londonDataWorkerV0" #option-inline-7-0) %Deals_obj-1_map)
+                     )
+                     (ap ("londonMembersWorkerV0" #option-inline-8-0) %Deals_obj-1_map)
+                    )
+                    (canon %init_peer_id% %Deals_obj-1_map  Deals_obj-1)
+                   )
+                  )
+                 )
+                 (ap Deals_obj-1.$.londonContentWorkerV0 Deals_obj-1_flat)
+                )
+                (ap Deals_obj-1_flat.$.[0].dealIdOriginal Deals_obj-1_flat_flat)
+               )
+               (xor
+                (call -relay- ("subnet" "resolve") [Deals_obj-1_flat_flat] ret-5)
+                (fail :error:)
+               )
+              )
+              (new -if-error-
+               (xor
+                (match ret-5.$.success false
+                 (seq
+                  (new $array-inline-2
+                   (seq
+                    (seq
+                     (ap "Failed to resolve subnet: " $array-inline-2)
+                     (ap ret-5.$.error $array-inline-2)
+                    )
+                    (canon %init_peer_id% $array-inline-2  #array-inline-2-0)
+                   )
+                  )
+                  (call %init_peer_id% ("run-console" "print") [#array-inline-2-0])
+                 )
+                )
+                (seq
+                 (ap :error: -if-error-)
+                 (xor
+                  (match :error:.$.error_code 10001
+                   (null)
+                  )
+                  (fail -if-error-)
+                 )
+                )
+               )
+              )
+             )
+             (ap ret-5.$.workers ret-5_flat)
+            )
+            (call %init_peer_id% ("run-console" "print") [ret-5_flat.$.[0]])
+           )
+           (xor
+            (seq
+             (seq
+              (seq
+               (seq
+                (seq
+                 (new $-ephemeral-stream-
+                  (new #-ephemeral-canon-
+                   (canon -relay- $-ephemeral-stream-  #-ephemeral-canon-)
+                  )
+                 )
+                 (new $-ephemeral-stream-
+                  (new #-ephemeral-canon-
+                   (canon ret-5_flat.$.[0].host_id $-ephemeral-stream-  #-ephemeral-canon-)
+                  )
+                 )
+                )
+                (call ret-5_flat.$.[0].worker_id.[0] ("memContent" "create") [q-0] ret-6)
+               )
+               (new $-ephemeral-stream-
+                (new #-ephemeral-canon-
+                 (canon ret-5_flat.$.[0].host_id $-ephemeral-stream-  #-ephemeral-canon-)
+                )
+               )
+              )
+              (new $-ephemeral-stream-
+               (new #-ephemeral-canon-
+                (canon -relay- $-ephemeral-stream-  #-ephemeral-canon-)
+               )
+              )
+             )
+             (call %init_peer_id% ("run-console" "print") [ret-6])
+            )
+            (seq
+             (seq
+              (seq
+               (new $-ephemeral-stream-
+                (new #-ephemeral-canon-
+                 (canon ret-5_flat.$.[0].host_id $-ephemeral-stream-  #-ephemeral-canon-)
+                )
+               )
+               (new $-ephemeral-stream-
+                (new #-ephemeral-canon-
+                 (canon -relay- $-ephemeral-stream-  #-ephemeral-canon-)
+                )
+               )
+              )
+              (new $-ephemeral-stream-
+               (new #-ephemeral-canon-
+                (canon %init_peer_id% $-ephemeral-stream-  #-ephemeral-canon-)
+               )
+              )
+             )
+             (fail :error:)
+            )
+           )
+          )
+          (next q-0)
          )
          (null)
         )
-        (next q-0)
+        (next qq-0)
        )
        (null)
       )
@@ -802,7 +1023,12 @@ export function run(...args) {
     "functionName": "run",
     "arrow": {
         "domain": {
-            "fields": {},
+            "fields": {
+                "campaignCid": {
+                    "name": "string",
+                    "tag": "scalar"
+                }
+            },
             "tag": "labeledProduct"
         },
         "codomain": {

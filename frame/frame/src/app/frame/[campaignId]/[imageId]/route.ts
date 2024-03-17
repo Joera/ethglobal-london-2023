@@ -24,7 +24,7 @@ export async function GET(req: NextRequest, { params }: { params: CampaignParams
       buttons: [{ label: "Mint", action: "post" }],
       aspect_ratio: "1.91:1",
       image: {
-        url: `${process.env.BASE_URL}/image/${campaignId}/${imageId}`
+        url: `${process.env.BASE_URL}/rendered_image/${campaignId}/${imageId}`
       },
     });
     return new NextResponse(frameMetadata);

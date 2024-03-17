@@ -11,3 +11,5 @@ name: memContent
 modules:
   facade:
     get: memContent
+  curl_effector:
+    get: curl_effector/

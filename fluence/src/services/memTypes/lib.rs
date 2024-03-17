@@ -17,9 +17,10 @@ pub struct MemMemberAssets {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MemCampaign {
     pub id: String,
-    pub index: String,
+    pub index: u8,
     pub dune_query_id: String,
     pub timebase: String, // weekly / monthly / milestone
+    pub reached: u8,
     pub milestone: String,
     pub runs_untill: String
 }

@@ -9,7 +9,7 @@ pub fn main() {}
 #[marine]
 pub fn fetch() -> Vec<String> {
 
-    let safe_cid = "QmQzRiaPHiMqBsBKW64H21zVTUKM7ozzMntSUksy9nbXUw".to_string();
+    let safe_cid = "QmToDXJpg2ukuMJzZbyvqi6TRdCXDG66prqCvjuQT3betp".to_string();
 
     // get from subscription contract when enough time 
     vec!(safe_cid) 

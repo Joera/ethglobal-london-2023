@@ -3,12 +3,13 @@ aqua Services declares *
 import "./types"
 
 service MemData("memData"):
-  add(subscription: MemSubscription) -> *MemContentObject
+  add(subscription: MemSubscription) -> []MemContentObject
 
 service MemContent("memContent"):
   castFrame() -> string
   nft() -> string
-  renderFrame() -> string
+ -- create(content_object: MemContentObject) -> string
+  create(data_object: MemContentObject) -> string
 
 service MemSubscriptions("memSubscriptions"):
   fetch() -> []string
