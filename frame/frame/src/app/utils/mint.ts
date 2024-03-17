@@ -8,13 +8,13 @@ import contractAbi from "./contract.json";
 const account = "" as '0x';
 
 export const publicClient = createPublicClient({
-  chain: baseSepolia,
+  // chain: baseSepolia,
   transport: http(process.env.ALCHEMY_URL),
 });
 
 const walletClient = createWalletClient({
   account,
-  chain: baseSepolia,
+  // chain: baseSepolia,
   transport: http(process.env.ALCHEMY_URL),
 });
 
