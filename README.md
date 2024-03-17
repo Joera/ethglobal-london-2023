@@ -1,3 +1,3 @@
-# ethglobal-london-2023
+# ethglobal-london-2024
 
 bla bla
